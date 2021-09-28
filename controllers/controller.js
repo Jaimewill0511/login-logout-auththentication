@@ -78,7 +78,7 @@ exports.getIn = async (req, res, next) => {
 }
 
 exports.homepage =  async (req, res) => {
-    res.render('Welcome')
+    res.render('welcome')
 }
 
 exports.logout = async (req, res) => {
