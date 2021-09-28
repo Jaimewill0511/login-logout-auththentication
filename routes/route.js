@@ -6,10 +6,10 @@ const {homepage, register, getIn, logout} = require("../controllers/controller")
 
 router.get('/', homepage)
 router.get('/register', (req, res) => res.render('Register'));
-router.get('/dashboard', ensureAuthenticated, (req, res) => res.render('dashboard', {
+router.get('/dashboard', ensureAuthenticated, (req, res) => res.render('Dashboard', {
     name : req.user.name, 
 }));
-router.get('/login', (req, res) => res.render('login'));
+router.get('/login', (req, res) => res.render('Login'));
 router.post('/register', register)
 router.post('/login', getIn);
 router.get('/logout', logout )
